@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial Calculator</title>
+    <style>
+        .h2 {
+          font-size: 40px;
+        }
+        #b1 {
+          font-size: 40px;
+        }
+      </style>
+    
+</head>
+<body>
+    <h2>To find factorial </h2>
+    <button id="b1">Try it</button>
+    <p id="result"style="font-size: 24px;"></p>
+
+    <script>
+        function calculateFactorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            return n * calculateFactorial(n - 1);
+        }
+
+        document.getElementById("b1").onclick = function() {
+            const userInput = prompt("Enter a number to find its factorial:");
+            const number = parseInt(userInput);
+            
+            if (isNaN(number) || number < 0) {
+                alert("Please enter a valid non-negative integer.");
+            } else {
+                const result = calculateFactorial(number);
+                document.getElementById("result").innerText = `The factorial of ${number} is ${result}.`;
+            }
+        }
+    </script>
+</body>
+</html>
