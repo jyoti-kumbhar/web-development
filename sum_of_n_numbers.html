@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .h2 {
+      font-size: 40px;
+    }
+    #b1 {
+      font-size: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<h2 class="h2">To find sum of first “n” numbers..</h2>
+
+<button id="b1" onclick="myFunction()">Try it</button>
+
+<p id="demo" style="font-size: 24px;"></p>
+
+<script>
+  function myFunction() {
+    // Prompt the user to enter a number
+    let n = prompt("Enter a number (n) to find the sum of first n numbers:");
+
+    // Convert the input to a number (since prompt returns a string)
+    n = parseInt(n);
+
+    // Check if n is a valid number
+    if (isNaN(n)) {
+      document.getElementById("demo").textContent = "Invalid input. Please enter a valid number.";
+    } else {
+      let sum = 0;
+
+      // Calculate the sum of the first n numbers
+      for (let i = 1; i <= n; i++) {
+        sum += i;
+      }
+
+      document.getElementById("demo").textContent = `The sum of the first ${n} numbers is: ${sum}`;
+    }
+  }
+</script>
+
+</body>
+</html>
