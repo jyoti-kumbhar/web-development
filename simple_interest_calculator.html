@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Interest Calculator</title>
+    <style>
+        .labels{
+            font-size: 40px;
+        }
+        #calculateInterestButton, #finalAmountButton{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="labels" >Simple Interest Calculator</h2>
+    <label class="labels" for="principal">Principal Amount:</label>
+    <input type="text" id="principal" style="font-size: 24px;"><br><br>
+
+    <label class="labels" for="years">Number of Years:</label>
+    <input type="text" id="years" style="font-size: 24px;"><br><br>
+
+    <label class="labels" for="rate">Rate of Interest:</label>
+    <input type="text" id="rate" style="font-size: 24px;"><br><br>
+
+    <button id="calculateInterestButton">Calculate Interest</button>
+    <button id="finalAmountButton">Final Amount</button>
+    
+    <p id="interestResult" style="font-size: 24px;"></p>
+    <p id="finalAmountResult" style="font-size: 24px;"></p>
+
+    <script>
+        function calculateSimpleInterest(principal, years, rate) {
+            return (principal * years * rate) / 100;
+        }
+
+        document.getElementById("calculateInterestButton").onclick = function() {
+            const principal = parseFloat(document.getElementById("principal").value);
+            const years = parseFloat(document.getElementById("years").value);
+            const rate = parseFloat(document.getElementById("rate").value);
+
+            if (isNaN(principal) || isNaN(years) || isNaN(rate) || principal <= 0 || years <= 0 || rate <= 0) {
+                alert("Please enter valid positive numbers for all fields.");
+            } else {
+                const interest = calculateSimpleInterest(principal, years, rate);
+                document.getElementById("interestResult").innerText = `The Simple Interest is ${interest}.`;
+            }
+        }
+
+        document.getElementById("finalAmountButton").onclick = function() {
+            const principal = parseFloat(document.getElementById("principal").value);
+            const years = parseFloat(document.getElementById("years").value);
+            const rate = parseFloat(document.getElementById("rate").value);
+
+            if (isNaN(principal) || isNaN(years) || isNaN(rate) || principal <= 0 || years <= 0 || rate <= 0) {
+                alert("Please enter valid positive numbers for all fields.");
+            } else {
+                const interest = calculateSimpleInterest(principal, years, rate);
+                const finalAmount = principal + interest;
+                document.getElementById("finalAmountResult").innerText = `The Final Amount is ${finalAmount}.`;
+            }
+        }
+    </script>
+</body>
+</html>
