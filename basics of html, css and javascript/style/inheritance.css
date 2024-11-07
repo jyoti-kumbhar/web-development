@@ -1,0 +1,16 @@
+body{
+    color: limegreen;
+    font-size: 30px;
+}
+.one a{
+    color: inherit;
+}
+.two a{
+    color: initial;
+}
+.three a{
+    color: unset;
+}
+p{
+    color: deeppink !important; 
+}

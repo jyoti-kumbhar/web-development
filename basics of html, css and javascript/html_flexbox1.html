@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox1</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        img{
+            width: 100%;
+        }
+        .container{
+            position: relative;
+            padding: 10px;
+            flex-basis: 350px;
+        }
+        button{
+            border-radius: 0%;
+            border: grey;
+            background-color: grey;
+            color: white;
+            padding: 7px;
+            width: 90%;
+            margin: 10px;
+        }
+        p{
+            margin: 20px;
+        }
+        .b{
+            top: 10px;
+        }
+        .a, .c{
+            top: 40px;
+        }
+        p, button{
+            border: 2px;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container a">
+        <img src="assets/sea.jpg" alt="sea">
+        <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. </b><br><br> Delectus deleniti quas excepturi harum voluptates reiciendis voluptate placeat deserunt minima consequatur quis dolorem odit, enim.Ipsam tempora autem non quisquam minima atque veritatis facere cum voluptatem vitae, dignissimos incidunt ab eos ullam at, distinctio a aut!</p>
+        <button>Read more</button>
+    </div>
+    <div class="container b">
+        <img src="assets/sea.jpg" alt="sea">
+        <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. </b><br><br> Delectus deleniti quas excepturi harum voluptates reiciendis voluptate placeat deserunt minima consequatur quis dolorem odit, enim.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam tempora autem non quisquam minima atque veritatis facere cum voluptatem vitae, dignissimos incidunt ab eos ullam at, distinctio a aut! Laboriosam distinctio, aliquid architecto ad ea vitae quam debitis nesciunt voluptatem eaque blanditiis a. Similique ad itaque deserunt, accusamus nam omnis!</p>
+        <button>Read more</button>
+    </div>
+    <div class="container c">
+        <img src="assets/sea.jpg" alt="sea">
+        <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b> <br><br> Delectus deleniti quas excepturi harum voluptates reiciendis voluptate placeat deserunt minima consequatur quis dolorem odit, enim.Ipsam tempora autem non quisquam minima atque veritatis facere cum voluptatem vitae, dignissimos incidunt ab eos ullam at, distinctio a aut!</p>
+        <button>Read more</button>
+    </div>
+</body>
+</html>

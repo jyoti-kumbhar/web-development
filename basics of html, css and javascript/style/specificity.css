@@ -1,0 +1,23 @@
+.fav{
+    color: red;
+    font-weight: bold;
+}
+
+ul#healthy_drinks li{
+    color: rgb(177, 129, 7);
+    font-weight: 100;
+}
+
+ul#healthy_drinks li.fav{
+    color: blue;
+    font-weight: 600;
+}
+
+ul#healthy_drinks li{
+    color: rgb(238, 10, 124);
+    font-weight: 500;
+}
+
+html{
+    font-size: 50px;
+}

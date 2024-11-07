@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+            grid-gap: 20px;
+            grid-auto-columns: minmax(50px,auto);
+            grid-auto-rows: minmax(100px,auto);
+        }
+        .items{
+            background-color: lightpink;
+            border: 3px navy solid;
+            border-radius: 3px;
+        }
+        .item3{
+            grid-column-start: 1;
+            grid-column-end: 5;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+        .nested{
+            border: 2px palevioletred solid;
+            border-radius: 2px;
+            background-color: olivedrab;
+            color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">box 1</div>
+        <div class="items item2">box 2</div>
+        <div class="items item3">
+        <div class="nested">nb 1</div>
+        <div class="nested">nb 2</div>
+        <div class="nested">nb 3</div>
+        <div class="nested">nb 4</div>
+        <div class="nested">nb 5</div>
+        </div>
+        <div class="items">box 4</div>
+        <div class="items">box 5</div>
+    </div>
+</body>
+</html>

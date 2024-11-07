@@ -1,0 +1,22 @@
+body{
+    font-size: 30px;
+}
+.cascading{
+    color: red;
+    border: 2px solid black;
+    width: 300px;
+    height: 400px;
+}
+.one{
+    color: rgb(17, 0, 255);
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+.two{
+    color: rgb(62, 121, 69);
+    border: 3px solid black;
+    width: 80px;
+    overflow: scroll;
+}
