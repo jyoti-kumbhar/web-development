@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<style>
+h1{
+font-size: 60px;
+text-align:center;
+}
+#targetDiv{
+font-size: 50px;
+}
+img{
+height:150px;
+}
+</style>
+</head>
+
+<body>
+<h1>Interactive mouseovers</h1>
+
+<img src="http://localhost:81/S089%20jyoti/image1.jpg" onmouseover="getData('http://localhost:81/S089%20jyoti/img1.txt','targetDiv')">
+<img src="http://localhost:81/S089%20jyoti/image2.jpg" onmouseover="getData('http://localhost:81/S089%20jyoti/img2.txt','targetDiv')">
+<img src="http://localhost:81/S089%20jyoti/image3.jpg" onmouseover="getData('http://localhost:81/S089%20jyoti/img3.txt','targetDiv')">
+
+<div id="targetDiv">
+<p>Welcome!!!</p>
+</div>
+</body>
+
+<script language = "javascript">
+var XMLHttpRequestObject = false;
+
+if (window.XMLHttpRequest){
+XMLHttpRequestObject = new XMLHttpRequest();
+} else if (window.ActiveXObject){
+XMLHttpRequestObject = new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+function getData(dataSource, divID){
+if(XMLHttpRequestObject){
+  var obj = document.getElementById(divID);
+  XMLHttpRequestObject.open("GET",dataSource);
+
+  XMLHttpRequestObject.onreadystatechange = function(){
+    if(XMLHttpRequestObject.readyState == 4 && XMLHttpRequestObject.status == 200){
+        obj.innerHTML = XMLHttpRequestObject.responseText;
+
+      }
+
+  }
+  XMLHttpRequestObject.send(null);
+}
+}
+</script>
+
+</html>
